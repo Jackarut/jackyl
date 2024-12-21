@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Carousel Container */
+.carousel-container {
+  display: flex;
+  overflow-x: scroll;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  scroll-behavior: smooth;
+}
+
+/* Product Card */
+.product-card {
+  min-width: 250px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0; /* Prevent shrinking of cards */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image */
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Product Title */
+.product-card h3 {
+  margin: 10px;
+  font-size: 1.2em;
+  color: #333;
+  text-align: center;
+}
+
+/* Product Description (Initially hidden) */
+.product-details {
+  display: none;
+  padding: 10px;
+  font-size: 0.9em;
+  color: #666;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+/* Toggle visibility when product is clicked */
+.product-card.open .product-details {
+  display: block;
+}
+
+/* Hide scrollbar for a cleaner look */
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Add arrows to navigate carousel */
+.carousel-nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -40px;
+}
+
+.carousel-nav button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-nav button:hover {
+  background-color: #0056b3;
+}
